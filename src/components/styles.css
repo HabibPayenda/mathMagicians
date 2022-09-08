@@ -38,6 +38,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
 }
 
 .gray {

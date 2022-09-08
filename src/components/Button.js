@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import './styles.css';
 import React from 'react';
 
@@ -9,9 +11,11 @@ class Button extends React.Component {
   }
 
   render() {
-    const { large, color, text } = this.props;
+    const {
+      large, color, text, changeCalculation,
+    } = this.props;
     return (
-      <div className={`button ${color} ${large}`}>
+      <div className={`button ${color} ${large}`} onClick={() => changeCalculation(text)}>
         {text}
       </div>
     );

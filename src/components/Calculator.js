@@ -5,41 +5,59 @@ import Header from './Header';
 import Main from './Main';
 import Button from './Button';
 import Footer from './Footer';
+import buttons from './constants/buttons';
+import footerButtons from './constants/footerButtons';
+import calculate from '../functions/calculate';
 
 class Calculator extends React.Component {
+  btns = buttons.map((item) => {
+    const button = (
+      <Button
+        large={item.size}
+        color={item.color}
+        text={item.text}
+        key={item.text}
+        changeCalculation={(text) => this.changeCalculation(text)}
+      />
+    );
+    return button;
+  });
+
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      total: 0,
+      next: null,
+      operation: null,
+    };
+
+    this.footerBtns = footerButtons.map((item) => {
+      const button = (
+        <Button
+          large={item.size}
+          color={item.color}
+          text={item.text}
+          key={item.text}
+          changeCalculation={this.changeCalculation}
+        />
+      );
+      return button;
+    });
   }
 
+  changeCalculation = (text) => {
+    const calculation = calculate(this.state, text);
+    this.setState(calculation);
+  };
+
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="container">
-        <Header />
-        <Main>
-          <Button color="gray" text="AC" />
-          <Button color="gray" text="+/-" />
-          <Button color="gray" text="%" />
-          <Button color="orange" text="/" />
-          <Button color="gray" text="7" />
-          <Button color="gray" text="8" />
-          <Button color="gray" text="9" />
-          <Button color="orange" text="x" />
-          <Button color="gray" text="4" />
-          <Button color="gray" text="5" />
-          <Button color="gray" text="6" />
-          <Button color="orange" text="-" />
-          <Button color="gray" text="1" />
-          <Button color="gray" text="2" />
-          <Button color="gray" text="3" />
-          <Button color="orange" text="+" />
-        </Main>
-        <Footer>
-          <Button large="large" color="gray" text="0" />
-          <Button color="gray" text="." />
-          <Button color="orange" text="=" />
-        </Footer>
+        <Header total={total} next={next} operation={operation} />
+        <Main>{this.btns}</Main>
+        <Footer>{this.footerBtns}</Footer>
       </div>
     );
   }
