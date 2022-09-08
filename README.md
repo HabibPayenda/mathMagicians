@@ -2,37 +2,47 @@
 
 # Project Name
 
-> Description the project.
+> This is a calculator app project which is able to do the bisic math operations.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS, JavaScript
+- React
+- WebPack 
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link]()
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Install node.js and npm.
+- Install Git.
+
 ### Setup
 
+- Clone the repository by running the following command in your terminal:
+    git clone https://github.com/HabibPayenda/mathMagicians.git
+    
+- Change your directory by by running the following command in your terminal:
+    cd mathMagicians
+
 ### Install
+- Install the dependencies by running npm i in your terminal
 
 ### Usage
 
+- After all the dependencies are installed open the app by running npm start in your terminal
+
 ### Run tests
+
+To test the application run npm test in your terminal.
 
 ### Deployment
 
@@ -40,17 +50,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Habib Payenda**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@HabibPayenda](https://github.com/githubhandle)
+- Twitter: [@HabibPayenda](https://twitter.com/twitterhandle)
+- LinkedIn: [@HabibPayenda](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
