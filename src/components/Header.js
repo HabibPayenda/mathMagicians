@@ -9,9 +9,12 @@ class Header extends React.Component {
   }
 
   render() {
+    const { total, next, operation } = this.props;
     return (
       <div className="header">
-        0
+        {total}
+        {operation}
+        { next }
       </div>
     );
   }
