@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Calculator from './components/Calculator';
+import { BrowserRouter } from 'react-router-dom';
 
-class App extends React.Component {
+import App from './App';
+
+class Index extends React.Component {
   constructor(props) {
     super(props);
 
@@ -11,8 +13,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <Calculator />;
+    return (
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
