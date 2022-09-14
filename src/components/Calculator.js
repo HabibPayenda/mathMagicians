@@ -1,6 +1,6 @@
 import './styles.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Button from './Button';
@@ -9,58 +9,58 @@ import buttons from './constants/buttons';
 import footerButtons from './constants/footerButtons';
 import calculate from '../functions/calculate';
 
-class Calculator extends React.Component {
-  btns = buttons.map((item) => {
+const Calculator = () => {
+  const [total, setTotal] = useState(0);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
+
+  const obj = {
+    total,
+    next,
+    operation,
+  };
+
+  const changeCalculation = (text) => {
+    const calculation = calculate(obj, text);
+    const { total, next, operation } = calculation;
+    setTotal(total);
+    setNext(next);
+    setOperation(operation);
+  };
+
+  const btns = buttons.map((item) => {
     const button = (
       <Button
         large={item.size}
         color={item.color}
         text={item.text}
         key={item.text}
-        changeCalculation={(text) => this.changeCalculation(text)}
+        changeCalculation={(text) => changeCalculation(text)}
       />
     );
     return button;
   });
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      total: 0,
-      next: null,
-      operation: null,
-    };
-
-    this.footerBtns = footerButtons.map((item) => {
-      const button = (
-        <Button
-          large={item.size}
-          color={item.color}
-          text={item.text}
-          key={item.text}
-          changeCalculation={this.changeCalculation}
-        />
-      );
-      return button;
-    });
-  }
-
-  changeCalculation = (text) => {
-    const calculation = calculate(this.state, text);
-    this.setState(calculation);
-  };
-
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div className="container">
-        <Header total={total} next={next} operation={operation} />
-        <Main>{this.btns}</Main>
-        <Footer>{this.footerBtns}</Footer>
-      </div>
+  const footerBtns = footerButtons.map((item) => {
+    const button = (
+      <Button
+        large={item.size}
+        color={item.color}
+        text={item.text}
+        key={item.text}
+        changeCalculation={changeCalculation}
+      />
     );
-  }
-}
+    return button;
+  });
+
+  return (
+    <div className="container">
+      <Header total={total} next={next} operation={operation} />
+      <Main>{btns}</Main>
+      <Footer>{footerBtns}</Footer>
+    </div>
+  );
+};
 
 export default Calculator;
