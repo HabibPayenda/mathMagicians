@@ -1,3 +1,4 @@
+import './components/styles.css';
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
@@ -7,12 +8,12 @@ import QueteScreen from './screens/QueteScreen';
 
 const App = () => (
   <div>
-    <header>
+    <header className="mainHeader">
       <h1>Math Magicians</h1>
-      <nav>
-        <Link to="/calculator">Calculatro </Link>
-        <Link to="/quete"> Quete </Link>
+      <nav className="navbar">
         <Link to="/"> Home </Link>
+        <Link to="/calculator">Calculator </Link>
+        <Link to="/quete"> Quete </Link>
       </nav>
     </header>
     <Routes>

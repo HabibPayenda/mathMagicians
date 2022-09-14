@@ -4,6 +4,80 @@
   box-sizing: border-box;
 }
 
+.mainHeader {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fc8947;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  cursor: pointer;
+}
+
+.screen {
+  padding: 20px;
+}
+
+.calcScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.queteScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  width: 100%;
+}
+
+.quete {
+  font-size: 30px;
+  width: 81%;
+  text-align: center;
+  line-height: 150%;
+}
+
+.rightContainer {
+  display: flex;
+  height: 100%;
+  flex: 2;
+}
+
+.leftContainer {
+  flex: 4;
+}
+
+.mainTitle {
+  margin-bottom: 50px;
+  align-self: flex-start;
+}
+
+.paragraph {
+  margin: 20px;
+  font-size: 24px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -18,8 +92,8 @@
   align-items: center;
   justify-content: flex-end;
   padding: 5px 10px;
-  width: 300px;
-  height: 30px;
+  width: 500px;
+  height: 50px;
   color: #fefefe;
   background-color: #2e2d2d;
 }
@@ -29,8 +103,8 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 2px;
-  width: 300px;
-  height: 120px;
+  width: 500px;
+  height: 200px;
 }
 
 .button {
@@ -60,8 +134,8 @@
 
 .footer {
   display: flex;
-  width: 300px;
-  height: 30px;
+  width: 500px;
+  height: 50px;
   margin-top: 2px;
   gap: 2px;
 }
