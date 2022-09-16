@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button tests should match the snapshot 1`] = `
+<div
+  className="button undefined undefined"
+  data-testid="button"
+  onClick={[Function]}
+>
+  -
+</div>
+`;
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="button undefined undefined"
+  data-testid="button"
+  onClick={[Function]}
+>
+  -
+</div>
+`;

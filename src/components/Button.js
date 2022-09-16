@@ -15,7 +15,7 @@ class Button extends React.Component {
       large, color, text, changeCalculation,
     } = this.props;
     return (
-      <div className={`button ${color} ${large}`} onClick={() => changeCalculation(text)}>
+      <div data-testid="button" className={`button ${color} ${large}`} onClick={() => changeCalculation(text)}>
         {text}
       </div>
     );
