@@ -11,7 +11,7 @@ class Header extends React.Component {
   render() {
     const { total, next, operation } = this.props;
     return (
-      <div className="header">
+      <div data-testid="header" className="header">
         {total}
         {operation}
         { next }
