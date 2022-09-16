@@ -56,6 +56,12 @@ To test the application run npm test in your terminal.
 - Twitter: [@HabibPayenda](https://twitter.com/twitterhandle)
 - LinkedIn: [@HabibPayenda](https://linkedin.com/in/linkedinhandle)
 
+👤 **Syed Shuja Hussain**
+
+- GitHub: [@shuja-shah](https://github.com/githubhandle)
+- Twitter: [@SyedShujaHussa3](https://twitter.com/twitterhandle)
+- LinkedIn: [@syedshujahussa](https://linkedin.com/in/linkedinhandle)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
